@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="web portofolio tailwind" />
+    <meta name="keyword" content="tailwindcss, css, tailwind" />
+    <meta name="author" content="rasena" />
+    <title>Portofolio Rasena</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https:use.fontawesome.com/releases/v5.7.0/css/all.css"
+    />
+    <link rel="shortcut icon" href="image/foto saya.jpeg" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        overflow-x: hidden;
+      }
+
+      .gradient {
+        background-image: linear-gradient(to bottom right, #4c15bf, #702459);
+      }
+
+      .gradient-skill {
+        background-image: linear-gradient(#f2f2f2, #999);
+      }
+
+      .gradient-bottom {
+        background-image: linear-gradient(#4c51bf, #702459);
+        height: 800px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="bg-gray-800" id="home">
+      <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+        <div class="relative flex h-16 items-center justify-between">
+          <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+            <!-- Mobile menu button-->
+            <button
+              type="button"
+              class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+              aria-controls="mobile-menu"
+              aria-expanded="false"
+            >
+              <span class="absolute -inset-0.5"></span>
+              <span class="sr-only">Open main menu</span>
+              <!--
+                  Icon when menu is closed.
+      
+                  Menu open: "hidden", Menu closed: "block"
+                -->
+              <svg
+                class="block h-6 w-6"
+                fill="none"
+                stroke-width="1.5"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                />
+              </svg>
+              <!--
+                  Icon when menu is open.
+      
+                  Menu open: "block", Menu closed: "hidden"
+                -->
+              <svg
+                class="hidden h-6 w-6"
+                fill="none"
+                stroke-width="1.5"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
+          <div
+            class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start"
+          >
+            <div class="flex flex-shrink-0 items-center">
+              <img
+                class="h-8 w-auto"
+                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
+                alt="Your Company"
+              />
+            </div>
+            <div class="hidden sm:ml-6 sm:block">
+              <div class="flex space-x-4">
+                <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                <a
+                  href="#home"
+                  class="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white"
+                  aria-current="page"
+                  >Dashboard</a
+                >
+                <a
+                  href="#about"
+                  class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+                  >About Me</a
+                >
+                <a
+                  href="#skill-framework"
+                  class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+                  >Skill framework</a
+                >
+                <a
+                  href="#recent-work"
+                  class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+                  >Recent Work</a
+                >
+                <a
+                  href="#contack"
+                  class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+                  >Contack Me</a
+                >
+              </div>
+            </div>
+          </div>
+          <div
+            class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"
+          >
+            <button
+              type="button"
+              class="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+            >
+              <span class="absolute -inset-1.5"></span>
+              <span class="sr-only">View notifications</span>
+              <svg
+                class="h-6 w-6"
+                fill="none"
+                stroke-width="1.5"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0"
+                />
+              </svg>
+            </button>
+
+            <!-- Profile dropdown -->
+            <div class="relative ml-3">
+              <div>
+                <button
+                  type="button"
+                  class="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                  id="user-menu-button"
+                  aria-expanded="false"
+                  aria-haspopup="true"
+                >
+                  <span class="absolute -inset-1.5"></span>
+                  <span class="sr-only">Open user menu</span>
+                  <img
+                    class="h-8 w-8 rounded-full"
+                    src="image/foto saya.jpeg"
+                    alt=""
+                  />
+                </button>
+              </div>
+
+              <!--
+                  Dropdown menu, show/hide based on menu state.
+      
+                  Entering: "transition ease-out duration-100"
+                    From: "transform opacity-0 scale-95"
+                    To: "transform opacity-100 scale-100"
+                  Leaving: "transition ease-in duration-75"
+                    From: "transform opacity-100 scale-100"
+                    To: "transform opacity-0 scale-95"
+                -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile menu, show/hide based on menu state. -->
+      <div class="sm:hidden" id="mobile-menu">
+        <div class="space-y-1 px-2 pb-3 pt-2">
+          <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+          <a
+            href="#home"
+            class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white"
+            aria-current="page"
+            >Dashboard</a
+          >
+          <a
+            href="#about"
+            class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+            >About</a
+          >
+          <a
+            href="#skill-framework"
+            class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+            >Skill framework</a
+          >
+          <a
+            href="#recent-work"
+            class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+            >Recent work</a
+          >
+          <a
+            href="#contack"
+            class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+            >contack</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <section class="w-screen mx-auto py-4 gradient" id="about">
+      <div class="px-16 py-8 text-center text-white">
+        <h1 class="w-full text-5xl font-bold">About Me</h1>
+        <div class="mb-4">
+          <div class="bg-pink-500 w-1/4 opacity-75 rounded h-1 mx-auto"></div>
+        </div>
+        <h2 class="text-3xl font-bold mb-2">
+          Hi, nama saya rasena. saya sedang belajar menggunakan tailwind css
+        </h2>
+        <h3 class="text-lg mb-2 text-center text-white">
+          saya seorang pelajar. saya dapat membuat aplikasi pemogramman dan saya
+          juga bisa merancang suatu sistem yang dibtuhkan user
+        </h3>
+        <div class="w-full">
+          <div class="px-4 py-4">
+            <img
+              src="image/foto saya.jpeg"
+              alt=""
+              class="shadow-lg rounded-full max-w-full mx-auto text-center w-48"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="grid grid-cols-1 md:grid-cols-3 bg-white py-4 px-4 md:py-8 px-8 m-16 rounded-lg"
+      >
+        <div class="max-w-sm shadow-lg px-4 py-4 bg-white-500 m-3 text-center">
+          <i class="fas fa-laptop-code text-blue-500 fa-5x mb-6"></i>
+          <div class="p-4">
+            <p class="font-bold text-lg md:text-xl mb-6">Programming</p>
+            <p class="text-gray-600 text-base mb-2">HTML</p>
+            <hr class="text-gray-600 mb-2" />
+            <p class="text-gray-600 text-base mb-2">CSS</p>
+            <hr class="text-gray-600 mb-2" />
+            <p class="text-gray-600 text-base mb-2">JAVASCRIPT</p>
+            <hr class="text-gray-600 mb-2" />
+          </div>
+          <div class="px-2 py-4">
+            <button
+              class="bg-blue-500 hover:bg-blue-700 text-white font-bold px-4 py-2 shadow-md rounded-tl-lg rounded-br-lg"
+            >
+              Lihat Portofolio
+            </button>
+          </div>
+        </div>
+
+        <div class="max-w-sm shadow-lg px-4 py-4 bg-white m-3 text-center">
+          <i class="fas fa-pencil-ruler text-red-500 fa-5x mb-6"></i>
+          <div class="p-4">
+            <p class="font-bold text-lg md:text-xl mb-6">Portofolio desain</p>
+            <p class="text-gray-600 text-base mb-2">Logo</p>
+            <hr class="text-gray-600 mb-2" />
+            <p class="text-gray-600 text-base mb-2">Mobile</p>
+            <hr class="text-gray-600 mb-2" />
+            <p class="text-gray-600 text-base mb-2">UI</p>
+            <hr class="text-gray-600 mb-2" />
+          </div>
+          <div class="px-2 py-4">
+            <button
+              class="bg-blue-500 hover:bg-blue-700 text-white font-bold px-4 py-2 shadow-md rounded-tl-lg rounded-br-lg"
+            >
+              Lihat Portofolio
+            </button>
+          </div>
+        </div>
+        <div class="max-w-sm shadow-lg px-4 py-4 bg-white-500 m-3 text-center">
+          <i class="fas fa-video text-green-500 fa-5x mb-6"></i>
+          <div class="p-4">
+            <p class="font-bold text-lg md:text-xl mb-6">Editing Video</p>
+            <p class="text-gray-600 text-base mb-2">Alightmotion</p>
+            <hr class="text-gray-600 mb-2" />
+            <p class="text-gray-600 text-base mb-2">Capcute</p>
+            <hr class="text-gray-600 mb-2" />
+            <p class="text-gray-600 text-base mb-2">Typography</p>
+            <hr class="text-gray-600 mb-2" />
+          </div>
+          <div class="px-2 py-4">
+            <button
+              class="bg-blue-500 hover:bg-blue-700 text-white font-bold px-4 py-2 shadow-md rounded-tl-lg rounded-br-lg"
+            >
+              Lihat Portofolio
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="container mx-auto py-4 bg-white px-4" id="skill-framework">
+      <div class="flex felx-wrap">
+        <div class="w-full md:w-4/12 ml-auto mr-auto px-4 mt-20">
+          <img
+            src="image/framework.jpeg"
+            alt=""
+            class="mx-w-full rounded-lg shadow-lg"
+          />
+        </div>
+        <div class="w-full md:w-5/12 ml-auto mr-auto px-4">
+          <div class="md:pr-12">
+            <h1
+              class="w-full my-2 text-5xl font-bold text-center text-gray-700"
+            >
+              Skill Framework
+            </h1>
+            <div class="mb-4">
+              <div
+                class="h-1 mx-auto bg-pink-500 w-1/2 opacity-75 my-0 mx-0 rounded"
+              ></div>
+            </div>
+            <p class="mt-4 text-lg text-gray-600">
+              berikut adalah item dan skala keahlian untuk framework
+            </p>
+            <ul class="list-none mt-4">
+              <li class="grid grid-cols-2 py-2">
+                <p class="text-lg text-gray-600">codeigneter</p>
+                <div class="gradient-skill w-1/2 rounded-full"></div>
+              </li>
+              <li class="grid grid-cols-2 py-2">
+                <p class="text-lg text-gray-600">Laravel</p>
+                <div class="gradient-skill w-1/2 rounded-full"></div>
+              </li>
+              <li class="grid grid-cols-2 py-2">
+                <p class="text-lg text-gray-600">Bootstrap</p>
+                <div class="gradient-skill w-4/2 rounded-full"></div>
+              </li>
+              <li class="grid grid-cols-2 py-2">
+                <p class="text-lg text-gray-600">Tailwind</p>
+                <div class="gradient-skill w-2/3 rounded-full"></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="container mx-auto py-8 bg-whte" id="recent-work">
+      <div class="text-center mb-8">
+        <h1 class="w-full my-2 text-5xl font-bold text-gray-700">
+          My recent work
+        </h1>
+        <div class="mb-4">
+          <div
+            class="h-1 mx-auto bg-pink-500 w-1/4 opacity-75 my-0 py-0 rounded"
+          ></div>
+        </div>
+        <p class="text-lg m-4 text-gray-600">Berikut adalah tugas baru saya</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 m-8">
+        <div class="bg-white-500 px-4 py-4 m-2 shadow-lg rounded">
+          <img
+            src="image/recent work 1.jpeg"
+            alt=""
+            class="w-full rounded-lg"
+          />
+          <div class="px-2 py-2 text-ceenter">
+            <p class="font-bold text-xl mb-2 text-gray-700">
+              Website landing page
+            </p>
+            <p class="text-gray-700 text-base">
+              Membuat landing page untuk bisnis course cyber security
+            </p>
+          </div>
+          <div class="px-2 py-4 text-center">
+            <button
+              class="bg-blue-500 hover:bg-blue-700 text-white font-bold px-4 py-2 shadow-md rounded-br-lg rounded-bl-lg"
+            >
+              <details>
+                <a
+                  href="https://sennn123321.github.io/landing-page-with-bootstrap/"
+                  >click to visit</a
+                >
+              </details>
+            </button>
+          </div>
+        </div>
+        <div class="bg-white-500 px-4 py-4 m-2 shadow-lg rounded">
+          <img
+            src="image/recent work 2.jpeg"
+            alt=""
+            class="w-full rounded-lg"
+          />
+          <div class="px-2 py-2 text-ceenter">
+            <p class="font-bold text-xl mb-2 text-gray-700">
+              Menghitung luas object
+            </p>
+            <p class="text-gray-700 text-base">
+              Study kasus javascript membuat perhitungan luas object
+            </p>
+          </div>
+          <div class="px-2 py-4 text-center">
+            <button
+              class="bg-blue-500 hover:bg-blue-700 text-white font-bold px-4 py-2 shadow-md rounded-br-lg rounded-bl-lg"
+            >
+              <details>Link Private</details>
+            </button>
+          </div>
+        </div>
+        <div class="bg-white-500 px-4 py-4 m-2 shadow-lg rounded">
+          <img
+            src="image/recent work 3.jpeg"
+            alt=""
+            class="w-full rounded-lg"
+          />
+          <div class="px-2 py-2 text-ceenter">
+            <p class="font-bold text-xl mb-2 text-gray-700">
+              Website portofolio
+            </p>
+            <p class="text-gray-700 text-base">
+              website protofolio pertama kali menggunakan Bootstrap
+            </p>
+          </div>
+          <div class="px-2 py-4 text-center">
+            <button
+              class="bg-blue-500 hover:bg-blue-700 text-white font-bold px-4 py-2 shadow-md rounded-br-lg rounded-bl-lg"
+            >
+              <details>
+                <a
+                  href="https://sennn123321.github.io/profile/?fbclid=PAZXh0bgNhZW0CMTEAAabF8Fivwwyt3NZsdwZ8_h58nicLp6c5K3PCzTmwZPFHEx7bs_dWd8QnFfU_aem_6e632Fegg5bsW4VcqxFgHw"
+                  >click to visit</a
+                >
+              </details>
+            </button>
+          </div>
+        </div>
+        <div class="bg-white-500 px-4 py-4 m-2 shadow-lg rounded">
+          <img
+            src="image/recent work 4.jpeg"
+            alt=""
+            class="w-full rounded-lg"
+          />
+          <div class="px-2 py-2 text-ceenter">
+            <p class="font-bold text-xl mb-2 text-gray-700">Fake bot</p>
+            <p class="text-gray-700 text-base">
+              website fake bot menggunakan javascript dengan logic sederhana
+            </p>
+          </div>
+          <div class="px-2 py-4 text-center">
+            <button
+              class="bg-blue-500 hover:bg-blue-700 text-white font-bold px-4 py-2 shadow-md rounded-br-lg rounded-bl-lg"
+            >
+              <details>
+                <a
+                  href="https://sennn123321.github.io/bot/?fbclid=PAZXh0bgNhZW0CMTEAAaYlIogTY3sZ9_5kVmRrzxjHiLfRkP32FIuKeS1FF6ruZSqJyQQstHb_eh8_aem_uaH7XaSAt8Kp3g_FeoBTWQ"
+                  >click to visit</a
+                >
+              </details>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="w-sreen mx-auto gradient-bottom" id="contack">
+      <h1 class="w-full my-2 text-5xl font-bold text-center text-white">
+        Contack me
+      </h1>
+      <div class="mb-4">
+        <div
+          class="h-1 mx-auto bg-pink-500 w-1/4 opacity-75 my-0 py-0 rounded"
+        ></div>
+      </div>
+      <div
+        class="container p-4 mb-6 w-full lg:w-1/2 shadow-lg rounded-lg bg-gray-200 mx-auto"
+      >
+        <form action="" class="p-5 lg:p-10 text-center">
+          <h4 class="text-2xl font-semibold">Want to contack me?</h4>
+          <p class="mt-1 mb-4 text-gray-600">Please send massage.</p>
+          <div class="w-full mb-4 mt-8">
+            <label for="" class="uppercase text-gray-600 text-xs font-bold"
+              >Nama lengkap</label
+            >
+            <input
+              type="text"
+              name=""
+              id=""
+              class="mt-2 px-3 py-3 placeholder-gray-600 text-gray-600 bg-white rounded text-sm shadow w-full"
+              placeholder="nama lengkap"
+            />
+          </div>
+          <div class="w-full mb-4 mt-4">
+            <label for="" class="uppercase text-gray-600 text-xs font-bold"
+              >Email</label
+            >
+            <input
+              type="email"
+              name=""
+              id=""
+              class="mt-2 px-3 py-3 placeholder-gray-600 text-gray-600 bg-white rounded text-sm shadow w-full"
+              placeholder="Email"
+            />
+          </div>
+          <div class="w-full mb-4 mt-4">
+            <label for="" class="uppercase text-gray-600 text-xs font-bold"
+              >Pesan</label
+            >
+            <textarea
+              name=""
+              id=""
+              rows="4"
+              cols="80"
+              class="mt-2 px-3 py-3 placeholder-gray-600 text-gray-600 bg-white rounded text-sm shadow w-full"
+              placeholder="Tuliskan pesan..."
+            ></textarea>
+          </div>
+          <div class="mb-6">
+            <button
+              class="bg-indigo-700 text-white text-sm font-bold uppercase px-6 py-3 rounded shadow hover:bg-indigo-900 hover:shadow-lg"
+              type="button"
+            >
+              Send massage
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+    <section class="w-screen bg-slate-800 mx-auto py-4 bg-white mt-8 mb-8">
+      <div class="text-center">
+        <a
+          href="https://www.instagram.com/rrssnaaa?igsh=MWJ6bml5Z3V4aXUzeg=="
+          class="text-indigo-700 hover:text-indigo-900 p-2"
+        >
+          <i class="fa-2x fab fa-instagram"></i>
+        </a>
+        <a
+          href="https://youtube.com/@snpaiii?si=6ondOuDNTj9d1JG8"
+          class="text-indigo-700 hover:text-indigo-900 p-2"
+        >
+          <i class="fa-2x fab fa-youtube"></i>
+        </a>
+        <a href="#" class="text-indigo-700 hover:text-indigo-900 p-2">
+          <i class="fa-2x fab fa-twitter"></i>
+        </a>
+      </div>
+      <div class="text-center mt-4 text-gray-600">
+        Created by rasena with TailwindCss
+      </div>
+    </section>
+  </body>
+</html>
